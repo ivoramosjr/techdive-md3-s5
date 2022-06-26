@@ -39,6 +39,10 @@ public class Producer {
 
             System.out.printf("Mensagem Enviada!");
 
+            session.close();
+
+            connection.close();
+
         } catch (JMSException e) {
             throw new RuntimeException(e);
         }
